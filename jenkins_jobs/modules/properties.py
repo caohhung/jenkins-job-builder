@@ -367,7 +367,7 @@ def inject(registry, xml_parent, data):
     :arg bool keep-system-variables: keep system variables (default true)
     :arg bool keep-build-variables: keep build variable (default true)
     :arg bool override-build-parameters: override build parameters
-        (default false)
+        (default true)
 
     Example:
 
@@ -393,7 +393,7 @@ def inject(registry, xml_parent, data):
         ('enabled', 'on', True),
         ('keep-system-variables', 'keepJenkinsSystemVariables', True),
         ('keep-build-variables', 'keepBuildVariables', True),
-        ('override-build-parameters', 'overrideBuildParameters', False),
+        ('override-build-parameters', 'overrideBuildParameters', True),
     ]
     helpers.convert_mapping_to_xml(inject, data, mapping, fail_required=True)
 
